@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.List;  
+import java.util.List;
 
 public class Article extends ArticleComponent {
     private List<ArticleComponent> components = new ArrayList<>();
@@ -18,6 +18,10 @@ public class Article extends ArticleComponent {
         for (ArticleComponent component : components) {
             component.display();
         }
+    }
+
+    public ArticleIterator iterator() {
+        return (new ArticleIterator(components));
     }
 
 }
